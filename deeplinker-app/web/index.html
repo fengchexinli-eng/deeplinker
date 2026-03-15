@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Deeplinker - 荣格心理学AI助手</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🧠</span>
+                    <span class="logo-text">Deeplinker</span>
+                </div>
+                <div class="header-actions">
+                    <button id="new-chat-btn" class="btn-icon" title="新对话">+</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="chat-container" class="chat-container">
+                <div id="welcome-screen" class="welcome-screen">
+                    <div class="welcome-content">
+                        <div class="welcome-icon">🧠</div>
+                        <h1 class="welcome-title">Deeplinker</h1>
+                        <p class="welcome-subtitle">你的荣格心理学AI助手</p>
+                        <div class="welcome-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">💭</span>
+                                <span class="feature-text">梦境解析</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🎯</span>
+                                <span class="feature-text">情绪探索</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔮</span>
+                                <span class="feature-text">象征解读</span>
+                            </div>
+                        </div>
+                        <div class="welcome-examples">
+                            <p class="examples-title">试着问我：</p>
+                            <div class="example-chips">
+                                <button class="example-chip" data-query="梦见蛇代表什么？">梦见蛇代表什么？</button>
+                                <button class="example-chip" data-query="如何处理分离焦虑？">如何处理分离焦虑？</button>
+                                <button class="example-chip" data-query="梦境中的水象征什么？">梦境中的水象征什么？</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="messages-container" class="messages-container hidden">
+                </div>
+
+                <div id="typing-indicator" class="typing-indicator hidden">
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="typing-text">Deeplinker 正在思考...</span>
+                </div>
+            </div>
+        </main>
+
+        <footer class="input-area">
+            <div class="input-container">
+                <textarea id="message-input" class="message-input" placeholder="输入消息..." rows="1"></textarea>
+                <button id="send-btn" class="send-btn" disabled>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
