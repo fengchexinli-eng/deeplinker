@@ -1,0 +1,19 @@
+{
+  "name": "deeplinker-app",
+  "version": "1.0.0",
+  "description": "Deeplinker Mobile App",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site'",
+    "sync": "npx cap sync",
+    "serve": "python -m http.server 8080"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/ios": "^6.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0"
+  }
+}
