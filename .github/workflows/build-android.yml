@@ -26,9 +26,14 @@ jobs:
     
     - name: Check directory structure
       run: |
+        echo "Current directory:"
+        pwd
+        echo "---"
+        echo "Listing root files:"
         ls -la
         echo "---"
-        ls -la deeplinker-app/web/ || echo "web directory not found"
+        echo "Looking for deeplinker-app:"
+        ls -la deeplinker-app/ || echo "deeplinker-app not found"
     
     - name: Install dependencies
       working-directory: deeplinker-app/web
